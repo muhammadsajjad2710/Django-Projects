@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<form method="post">{% csrf_token %}<input name="name" required> <input name="email" type="email" required> <input name="course" required> <button type="submit">Save</button></form>{% endblock %}

@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<p><a href="/new/">Add product</a></p><ul>{% for product in products %}<li>{{ product.name }} — stock {{ product.stock }}<form method="post" action="/{{ product.pk }}/sell/">{% csrf_token %}<input type="number" name="quantity" value="1" min="1"><button type="submit">Sell</button></form></li>{% empty %}<li>No products.</li>{% endfor %}</ul>{% endblock %}

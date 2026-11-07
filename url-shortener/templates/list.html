@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<p><a href="/new/">New link</a></p><ul>{% for link in links %}<li>{{ link.code }} → {{ link.url }} (<a href="/go/{{ link.code }}/">open</a>)</li>{% empty %}<li>No links.</li>{% endfor %}</ul>{% endblock %}

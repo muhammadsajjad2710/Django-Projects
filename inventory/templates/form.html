@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<form method="post">{% csrf_token %}<input name="name" required> <input name="stock" type="number" value="5"> <input name="price_cents" type="number" value="499"> <button type="submit">Save</button></form>{% endblock %}

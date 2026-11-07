@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<p><a href="/new/">Add student</a></p><ul>{% for student in students %}<li>{{ student.name }} — {{ student.course }} ({{ student.email }})</li>{% empty %}<li>No students.</li>{% endfor %}</ul>{% endblock %}

@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<form method="get"><input name="q" value="{{ q }}"><button type="submit">Search</button></form><p><a href="/new/">Add book</a></p><ul>{% for book in books %}<li>{{ book.title }} — {{ book.author }} ({{ book.year }})</li>{% empty %}<li>No books.</li>{% endfor %}</ul>{% endblock %}

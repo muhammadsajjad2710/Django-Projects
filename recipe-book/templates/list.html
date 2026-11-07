@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<p><a href="/new/">New recipe</a></p><ul>{% for recipe in recipes %}<li><a href="/{{ recipe.pk }}/">{{ recipe.title }}</a></li>{% empty %}<li>No recipes.</li>{% endfor %}</ul>{% endblock %}

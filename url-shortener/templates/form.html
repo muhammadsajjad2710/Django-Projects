@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<form method="post">{% csrf_token %}<input name="code" required placeholder="docs"> <input name="url" required placeholder="https://example.com"> <button type="submit">Save</button></form>{% endblock %}

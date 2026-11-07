@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<p>{{ question.text }}</p><form method="post" action="/vote/">{% csrf_token %}{% for choice in question.choices.all %}<p><label><input type="radio" name="choice" value="{{ choice.pk }}" required> {{ choice.text }} ({{ choice.votes }})</label></p>{% endfor %}<button type="submit">Vote</button></form>{% endblock %}

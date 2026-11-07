@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<p><a href="/add/">Add task</a></p><ul>{% for task in tasks %}<li>{{ task.title }} {% if task.done %}(done){% endif %} <a href="/{{ task.pk }}/toggle/">toggle</a></li>{% empty %}<li>No tasks.</li>{% endfor %}</ul>{% endblock %}
